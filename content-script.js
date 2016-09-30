@@ -1,6 +1,10 @@
 function main () {
 
-	if ( 'THREE' in window === false || 'VRControls' in THREE === false ) return;
+	if ( 'THREE' in window === false ) { console.log( 'VRREPLAY: THREE not found.' ); return; }
+	if ( 'VRControls' in THREE === false ) { console.log( 'VRREPLAY: THREE.VRControls not found.' ); return; }
+	if ( 'controls' in window === false ) { console.log( 'VRREPLAY: controls not found.' ); return; }
+	// if ( 'getVRDisplay' in controls === false ) { console.log( 'VRREC: controls.getVRDisplay() not found.' ); return; }
+	// if ( 'setVRDisplay' in controls === false ) { console.log( 'VRREC: controls.setVRDisplay() not found.' ); return; }
 
 	if ( 'ViveController' in THREE ) {
 
